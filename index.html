@@ -1163,15 +1163,25 @@ function finishQuiz(){
 
 updateStats();
 
-</script>
+<script src="data/bm-tahun1.js"></script>
+
 <script>
-/* =====================================
-   LOAD BM TAHUN 1 DATA
-===================================== */
+if (typeof BM_TAHUN1 === "undefined") {
 
-if (typeof BM_TAHUN1 !== "undefined") {
+  document.body.insertAdjacentHTML(
+    "afterbegin",
+    '<div style="background:#ffdddd;color:#900;padding:15px;font-weight:bold;">❌ BM TAHUN 1 TAK BERJAYA LOAD</div>'
+  );
 
-  // Gantikan Unit BM demo dengan data sebenar
+} else {
+
+  document.body.insertAdjacentHTML(
+    "afterbegin",
+    '<div style="background:#ddffdd;color:#060;padding:15px;font-weight:bold;">✅ BM LOADED: ' 
+    + BM_TAHUN1.units[0].questions.length 
+    + ' SOALAN UNIT 1</div>'
+  );
+
   subjects.bm.units = BM_TAHUN1.units.map(unit => ({
     id: unit.id,
     title: unit.title,
@@ -1179,18 +1189,14 @@ if (typeof BM_TAHUN1 !== "undefined") {
     learn: unit.learn.content
   }));
 
-  // Gantikan soalan BM Unit 1
   BM_TAHUN1.units.forEach(unit => {
 
     questions[unit.id] = unit.questions.map(item => {
 
-      const correctIndex =
-        item.options.indexOf(item.answer);
-
       return {
         q: item.q,
         a: item.options,
-        correct: correctIndex
+        correct: item.options.indexOf(item.answer)
       };
 
     });
