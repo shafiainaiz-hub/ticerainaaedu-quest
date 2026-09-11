@@ -754,10 +754,10 @@ const BM_TAHUN1 = {
         "Saya memukul keluarga saya."
       ],
       answer: "Saya sayang keluarga saya."
-        }
-]
-
-        {
+    }
+  ]
+},
+{
   id: "bm3",     
   title: "Unit 3 — Bercuti di Kampung",
 
