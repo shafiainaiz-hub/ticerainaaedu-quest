@@ -754,6 +754,417 @@ const BM_TAHUN1 = {
         "Saya memukul keluarga saya."
       ],
       answer: "Saya sayang keluarga saya." 
+    ]
+
+    {
+  id: "bm3",
+  title: "Unit 3 — Bercuti di Kampung",
+
+  learn: {
+    title: "🏡 Bercuti di Kampung",
+    content: `
+      <h3>🌾 Suasana di Kampung</h3>
+      <p>Kampung ialah tempat yang mempunyai suasana yang tenang dan nyaman.</p>
+      <p>Di kampung, kita boleh melihat pokok, sawah, sungai dan haiwan.</p>
+
+      <h3>👨‍👩‍👧‍👦 Aktiviti di Kampung</h3>
+      <ul>
+        <li>Melawat datuk dan nenek</li>
+        <li>Bermain dengan sepupu</li>
+        <li>Berjalan-jalan</li>
+        <li>Memancing</li>
+        <li>Bermain di halaman rumah</li>
+      </ul>
+
+      <h3>🐔 Haiwan di Kampung</h3>
+      <p>Antara haiwan yang boleh dilihat di kampung ialah ayam, itik, kambing dan lembu.</p>
+
+      <h3>🌳 Alam di Kampung</h3>
+      <p>Kita boleh melihat pokok, bunga, sungai dan sawah.</p>
+      <p>Kita hendaklah menjaga kebersihan alam sekitar.</p>
+
+      <h3>❤️ Keluarga di Kampung</h3>
+      <p>Semasa bercuti, kita boleh meluangkan masa bersama keluarga.</p>
+      <p>Kita hendaklah menghormati datuk, nenek dan saudara-mara.</p>
+
+      <h3>✏️ Ayat Mudah</h3>
+      <p><strong>Saya bercuti di kampung.</strong></p>
+      <p><strong>Saya melawat datuk dan nenek.</strong></p>
+      <p><strong>Saya bermain dengan sepupu.</strong></p>
+    `
+  },
+
+  questions: [
+
+    {
+      q: "Di manakah kita boleh melihat sawah?",
+      options: ["Kampung", "Kelas", "Pejabat", "Perpustakaan"],
+      answer: "Kampung"
+    },
+    {
+      q: "Siapakah yang mungkin kita lawati di kampung?",
+      options: ["Datuk dan nenek", "Guru", "Doktor", "Peniaga"],
+      answer: "Datuk dan nenek"
+    },
+    {
+      q: "Apakah suasana kampung?",
+      options: ["Tenang", "Bising seperti pasar", "Sesak", "Gelisah"],
+      answer: "Tenang"
+    },
+    {
+      q: "Apakah yang boleh kita lihat di kampung?",
+      options: ["Sawah", "Lif", "Eskulator", "Bangunan pejabat"],
+      answer: "Sawah"
+    },
+    {
+      q: "Pilih haiwan yang biasa terdapat di kampung.",
+      options: ["Ayam", "Singa", "Harimau", "Zirafah"],
+      answer: "Ayam"
+    },
+    {
+      q: "Pilih haiwan yang biasa dipelihara di kampung.",
+      options: ["Itik", "Harimau", "Buaya", "Gajah"],
+      answer: "Itik"
+    },
+    {
+      q: "Apakah aktiviti yang boleh dilakukan di kampung?",
+      options: ["Memancing", "Memandu kapal terbang", "Bermain komputer di sekolah", "Menaiki lif"],
+      answer: "Memancing"
+    },
+    {
+      q: "Siapakah yang boleh bermain bersama kita di kampung?",
+      options: ["Sepupu", "Pensel", "Kerusi", "Buku"],
+      answer: "Sepupu"
+    },
+    {
+      q: "Kita boleh berjalan-jalan di...",
+      options: ["kampung", "papan tulis", "bilik darjah", "almari"],
+      answer: "kampung"
+    },
+    {
+      q: "Apakah yang perlu kita jaga ketika berada di kampung?",
+      options: ["Kebersihan", "Kekotoran", "Sampah", "Kerosakan"],
+      answer: "Kebersihan"
+    },
+
+    {
+      q: "Pilih ayat yang betul.",
+      options: [
+        "Saya bercuti di kampung.",
+        "Saya kampung bercuti di.",
+        "Bercuti saya kampung.",
+        "Di saya bercuti kampung."
+      ],
+      answer: "Saya bercuti di kampung."
+    },
+    {
+      q: "Pilih ayat yang betul.",
+      options: [
+        "Saya melawat datuk.",
+        "Saya datuk melawat.",
+        "Melawat saya datuk.",
+        "Datuk saya melawat."
+      ],
+      answer: "Saya melawat datuk."
+    },
+    {
+      q: "Pilih ayat yang betul.",
+      options: [
+        "Saya bermain dengan sepupu.",
+        "Saya sepupu bermain.",
+        "Bermain saya sepupu.",
+        "Sepupu saya dengan bermain."
+      ],
+      answer: "Saya bermain dengan sepupu."
+    },
+    {
+      q: "Pilih ayat yang betul.",
+      options: [
+        "Nenek memasak makanan.",
+        "Nenek makanan memasak.",
+        "Memasak nenek makanan.",
+        "Makanan nenek memasak."
+      ],
+      answer: "Nenek memasak makanan."
+    },
+    {
+      q: "Pilih ayat yang menunjukkan aktiviti bercuti.",
+      options: [
+        "Saya melawat datuk.",
+        "Saya membuang sampah merata-rata.",
+        "Saya merosakkan pokok.",
+        "Saya mengejek nenek."
+      ],
+      answer: "Saya melawat datuk."
+    },
+
+    {
+      q: "Apakah kata kerja dalam ayat 'Saya bercuti di kampung'?",
+      options: ["bercuti", "Saya", "kampung", "di"],
+      answer: "bercuti"
+    },
+    {
+      q: "Apakah kata kerja dalam ayat 'Saya melawat datuk'?",
+      options: ["melawat", "Saya", "datuk", "di"],
+      answer: "melawat"
+    },
+    {
+      q: "Apakah kata kerja dalam ayat 'Saya bermain dengan sepupu'?",
+      options: ["bermain", "Saya", "sepupu", "dengan"],
+      answer: "bermain"
+    },
+    {
+      q: "Pilih perkataan yang menunjukkan perbuatan.",
+      options: ["memancing", "kampung", "sawah", "datuk"],
+      answer: "memancing"
+    },
+    {
+      q: "Pilih perkataan yang menunjukkan perbuatan.",
+      options: ["melawat", "nenek", "ayam", "sungai"],
+      answer: "melawat"
+    },
+
+    {
+      q: "Lengkapkan ayat: Saya bercuti di ______.",
+      options: ["kampung", "ayam", "datuk", "buku"],
+      answer: "kampung"
+    },
+    {
+      q: "Lengkapkan ayat: Saya melawat ______.",
+      options: ["datuk", "kampung", "sawah", "ayam"],
+      answer: "datuk"
+    },
+    {
+      q: "Lengkapkan ayat: Saya bermain dengan ______.",
+      options: ["sepupu", "sawah", "sungai", "ayam"],
+      answer: "sepupu"
+    },
+    {
+      q: "Lengkapkan ayat: Saya melihat ______ di kampung.",
+      options: ["ayam", "buku", "pensel", "kasut"],
+      answer: "ayam"
+    },
+    {
+      q: "Lengkapkan ayat: Kami bermain di ______ rumah.",
+      options: ["halaman", "buku", "ayam", "sungai"],
+      answer: "halaman"
+    },
+
+    {
+      q: "Pilih perkataan yang berkaitan dengan kampung.",
+      options: ["sawah", "lif", "eskalator", "pejabat"],
+      answer: "sawah"
+    },
+    {
+      q: "Pilih perkataan yang berkaitan dengan alam.",
+      options: ["sungai", "televisyen", "kerusi", "papan putih"],
+      answer: "sungai"
+    },
+    {
+      q: "Pilih perkataan yang berkaitan dengan haiwan.",
+      options: ["kambing", "meja", "buku", "pensel"],
+      answer: "kambing"
+    },
+    {
+      q: "Pilih perkataan yang berkaitan dengan keluarga.",
+      options: ["nenek", "sawah", "sungai", "ayam"],
+      answer: "nenek"
+    },
+    {
+      q: "Pilih perkataan yang berkaitan dengan tempat.",
+      options: ["kampung", "bermain", "melawat", "memancing"],
+      answer: "kampung"
+    },
+
+    {
+      q: "Apakah haiwan yang menghasilkan telur?",
+      options: ["Ayam", "Kambing", "Lembu", "Kucing"],
+      answer: "Ayam"
+    },
+    {
+      q: "Apakah haiwan yang mempunyai empat kaki?",
+      options: ["Kambing", "Ayam", "Itik", "Burung"],
+      answer: "Kambing"
+    },
+    {
+      q: "Apakah haiwan yang boleh berenang?",
+      options: ["Itik", "Ayam", "Kambing", "Lembu"],
+      answer: "Itik"
+    },
+    {
+      q: "Apakah haiwan yang biasa diternak di kampung?",
+      options: ["Lembu", "Singa", "Harimau", "Gajah"],
+      answer: "Lembu"
+    },
+    {
+      q: "Pilih haiwan yang sesuai dengan perkataan 'berkokok'.",
+      options: ["Ayam", "Kambing", "Lembu", "Itik"],
+      answer: "Ayam"
+    },
+
+    {
+      q: "Apakah yang boleh kita lihat di sawah?",
+      options: ["Padi", "Buku", "Kasut", "Kereta api"],
+      answer: "Padi"
+    },
+    {
+      q: "Apakah yang mengalir di sungai?",
+      options: ["Air", "Pasir", "Buku", "Kertas"],
+      answer: "Air"
+    },
+    {
+      q: "Apakah yang boleh tumbuh di kampung?",
+      options: ["Pokok", "Kerusi", "Pensel", "Beg"],
+      answer: "Pokok"
+    },
+    {
+      q: "Apakah warna yang biasanya terdapat pada daun?",
+      options: ["Hijau", "Ungu", "Hitam", "Kelabu"],
+      answer: "Hijau"
+    },
+    {
+      q: "Kita perlu menjaga ______ supaya sentiasa bersih.",
+      options: ["alam", "buku", "kasut", "meja"],
+      answer: "alam"
+    },
+
+    {
+      q: "Apakah yang patut dilakukan selepas berkelah?",
+      options: ["Mengemas sampah", "Meninggalkan sampah", "Membuang sampah ke sungai", "Merosakkan pokok"],
+      answer: "Mengemas sampah"
+    },
+    {
+      q: "Apakah yang tidak patut dilakukan di sungai?",
+      options: ["Membuang sampah", "Menjaga kebersihan", "Menikmati pemandangan", "Berhati-hati"],
+      answer: "Membuang sampah"
+    },
+    {
+      q: "Apakah sikap yang baik terhadap datuk dan nenek?",
+      options: ["Menghormati", "Mengejek", "Menjerit", "Memukul"],
+      answer: "Menghormati"
+    },
+    {
+      q: "Apakah sikap yang baik terhadap sepupu?",
+      options: ["Berkawan", "Bergaduh", "Mengejek", "Memukul"],
+      answer: "Berkawan"
+    },
+    {
+      q: "Apabila datuk bercakap, kita hendaklah...",
+      options: ["Mendengar", "Menjerit", "Berlari", "Mengejek"],
+      answer: "Mendengar"
+    },
+
+    {
+      q: "Pilih perkataan yang betul.",
+      options: ["kampung", "kampong", "kempung", "kimpung"],
+      answer: "kampung"
+    },
+    {
+      q: "Pilih perkataan yang betul.",
+      options: ["sawah", "sawih", "sawoh", "sawuh"],
+      answer: "sawah"
+    },
+    {
+      q: "Pilih perkataan yang betul.",
+      options: ["sungai", "sungaii", "sungei", "sungoi"],
+      answer: "sungai"
+    },
+    {
+      q: "Pilih perkataan yang betul.",
+      options: ["nenek", "ninik", "nonok", "nunuk"],
+      answer: "nenek"
+    },
+    {
+      q: "Pilih perkataan yang betul.",
+      options: ["sepupu", "sepapa", "sipipi", "supupu"],
+      answer: "sepupu"
+    },
+
+    {
+      q: "Berapakah perkataan dalam ayat 'Saya bercuti di kampung'?",
+      options: ["4", "2", "3", "5"],
+      answer: "4"
+    },
+    {
+      q: "Berapakah perkataan dalam ayat 'Saya melawat datuk'?",
+      options: ["3", "2", "4", "5"],
+      answer: "3"
+    },
+    {
+      q: "Berapakah perkataan dalam ayat 'Saya bermain dengan sepupu'?",
+      options: ["4", "2", "3", "5"],
+      answer: "4"
+    },
+    {
+      q: "Berapakah perkataan dalam ayat 'Nenek memasak makanan'?",
+      options: ["3", "2", "4", "5"],
+      answer: "3"
+    },
+    {
+      q: "Berapakah perkataan dalam ayat 'Saya melihat ayam'?",
+      options: ["3", "2", "4", "5"],
+      answer: "3"
+    },
+
+    {
+      q: "Apakah lawan bagi perkataan 'bersih'?",
+      options: ["Kotor", "Cantik", "Baik", "Sopan"],
+      answer: "Kotor"
+    },
+    {
+      q: "Apakah lawan bagi perkataan 'besar'?",
+      options: ["Kecil", "Panjang", "Tinggi", "Lebar"],
+      answer: "Kecil"
+    },
+    {
+      q: "Pilih perkataan yang menunjukkan tempat.",
+      options: ["kampung", "bercuti", "melawat", "bermain"],
+      answer: "kampung"
+    },
+    {
+      q: "Pilih perkataan yang menunjukkan haiwan.",
+      options: ["kambing", "sawah", "sungai", "kampung"],
+      answer: "kambing"
+    },
+    {
+      q: "Pilih perkataan yang menunjukkan orang.",
+      options: ["datuk", "sawah", "sungai", "ayam"],
+      answer: "datuk"
+    },
+
+    {
+      q: "Apakah yang membuatkan percutian di kampung menyeronokkan?",
+      options: ["Meluangkan masa bersama keluarga", "Bergaduh sepanjang masa", "Membuang sampah", "Merosakkan alam"],
+      answer: "Meluangkan masa bersama keluarga"
+    },
+    {
+      q: "Semasa bercuti di kampung, kita hendaklah bersikap...",
+      options: ["sopan", "kasar", "degil", "ganas"],
+      answer: "sopan"
+    },
+    {
+      q: "Kita perlu menjaga alam supaya...",
+      options: ["bersih", "kotor", "rosak", "berbau"],
+      answer: "bersih"
+    },
+    {
+      q: "Kita hendaklah menyayangi...",
+      options: ["keluarga", "sampah", "kerosakan", "kekotoran"],
+      answer: "keluarga"
+    },
+    {
+      q: "Pilih ayat yang paling sesuai.",
+      options: [
+        "Saya gembira bercuti di kampung.",
+        "Saya merosakkan kampung.",
+        "Saya membuang sampah ke sungai.",
+        "Saya mengejek datuk."
+      ],
+      answer: "Saya gembira bercuti di kampung."
+  
+    }
+  ]
+},     
       
     }
   ]
