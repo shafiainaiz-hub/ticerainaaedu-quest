@@ -367,15 +367,11 @@ const BM_TAHUN1 = {
 {
   q: "Kita perlu ______ keluarga kita.",
   options: ["menyayangi", "mengejek", "memukul", "mengganggu"],
-  answer: "menyayangi"
+  answer: "bahagia"
+    }
+  ]
 },
 {
-  q: "Keluarga yang saling menyayangi akan hidup dengan...",
-  options: ["bahagia", "marah", "sedih", "takut"],
-  answer: "bahagia"
-]
-        
-        {
   id: "bm2",
   title: "Unit 2 — Bergembira dengan Keluarga",
 
