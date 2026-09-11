@@ -224,9 +224,10 @@ const BM_TAHUN1 = {
   answer: "Ibu"
 },
 {
-  q: "Perkataan manakah mempunyai huruf O?",
-  options: ["Ibu", "Ayah", "Kakak", "Adik"],
-  answer: "Kakak"
+  q: "Huruf manakah bukan huruf vokal?",
+  options: ["A", "E", "B", "I"],
+  answer: "B"
+
 },
 {
   q: "Perkataan manakah mempunyai huruf U?",
