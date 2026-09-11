@@ -1163,6 +1163,41 @@ function finishQuiz(){
 updateStats();
 
 </script>
+<script>
+/* =====================================
+   LOAD BM TAHUN 1 DATA
+===================================== */
 
+if (typeof BM_TAHUN1 !== "undefined") {
+
+  // Gantikan Unit BM demo dengan data sebenar
+  subjects.bm.units = BM_TAHUN1.units.map(unit => ({
+    id: unit.id,
+    title: unit.title,
+    description: "Keluarga Penyayang • Membaca • Menulis",
+    learn: unit.learn.content
+  }));
+
+  // Gantikan soalan BM Unit 1
+  BM_TAHUN1.units.forEach(unit => {
+
+    questions[unit.id] = unit.questions.map(item => {
+
+      const correctIndex =
+        item.options.indexOf(item.answer);
+
+      return {
+        q: item.q,
+        a: item.options,
+        correct: correctIndex
+      };
+
+    });
+
+  });
+
+}
+</script>
+  
 </body>
 </html>
