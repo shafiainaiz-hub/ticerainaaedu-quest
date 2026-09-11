@@ -373,7 +373,7 @@ const BM_TAHUN1 = {
   q: "Keluarga yang saling menyayangi akan hidup dengan...",
   options: ["bahagia", "marah", "sedih", "takut"],
   answer: "bahagia"
-}
+]
         
         {
   id: "bm2",
