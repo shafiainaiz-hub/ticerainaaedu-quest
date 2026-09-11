@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TicerAinaaEdu Quest</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f5ff;
+  color: #24243a;
+}
+
+header {
+  background: linear-gradient(135deg, #7567e8, #a78bfa);
+  color: white;
+  padding: 28px 20px;
+  border-radius: 0 0 28px 28px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tagline {
+  margin-top: 6px;
+  opacity: .9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px 18px 50px;
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+.hero {
+  background: white;
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  margin-top: 25px;
+}
+
+.muted {
+  color: #77778a;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ecebf4;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.04);
+}
+
+.subject {
+  cursor: pointer;
+  transition: .2s;
+}
+
+.subject:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 42px;
+}
+
+.button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  background: #7567e8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+.back {
+  background: #eeeeF8;
+  color: #44445b;
+  margin-bottom: 15px;
+}
+
+.unit {
+  cursor: pointer;
+}
+
+.unit:hover {
+  border-color: #7567e8;
+}
+
+.badge {
+  display: inline-block;
+  background: #eeeaff;
+  color: #6255d6;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.progress {
+  height: 10px;
+  background: #e9e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #7567e8;
+}
+
+.question {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.answers {
+  display: grid;
+  gap: 12px;
+}
+
+.answer {
+  padding: 15px;
+  background: white;
+  border: 2px solid #e7e6ef;
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 16px;
+}
+
+.answer:hover {
+  border-color: #7567e8;
+}
+
+.correct {
+  background: #e8f8ef !important;
+  border-color: #35ae70 !important;
+}
+
+.wrong {
+  background: #fff0f2 !important;
+  border-color: #e25d6a !important;
+}
+
+.score {
+  font-size: 48px;
+  font-weight: bold;
+  color: #7567e8;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎓 TicerAinaaEdu Quest</div>
+  <div class="tagline">Learn • Play • Practice • Quest</div>
+</header>
+
+<div class="container">
+
+<!-- HOME -->
+<section id="home" class="screen active">
+
+  <div class="hero">
+    <span class="badge">YEAR 1</span>
+
+    <h1>Welcome to your learning adventure! 🚀</h1>
+
+    <p class="muted">
+      Choose your favourite subject and start your quest.
+    </p>
+
+    <p>
+      ⭐ <b id="xp">0</b> XP
+    </p>
+
+    <div class="progress">
+      <span id="mainProgress" style="width:10%"></span>
+    </div>
+  </div>
+
+  <h2>📚 Choose a Subject</h2>
+
+  <div class="grid">
+
+    <div class="card subject" onclick="openSubject('BM')">
+      <div class="icon">📘</div>
+      <h2>Bahasa Melayu</h2>
+      <p class="muted">Membaca • Menulis • Bahasa</p>
+    </div>
+
+    <div class="card subject" onclick="openSubject('ENG')">
+      <div class="icon">🇬🇧</div>
+      <h2>English</h2>
+      <p class="muted">Vocabulary • Grammar • Reading</p>
+    </div>
+
+    <div class="card subject" onclick="openSubject('MATH')">
+      <div class="icon">🔢</div>
+      <h2>Mathematics</h2>
+      <p class="muted">Numbers • Operations • Problem Solving</p>
+    </div>
+
+    <div class="card subject" onclick="openSubject('SCI')">
+      <div class="icon">🔬</div>
+      <h2>Science</h2>
+      <p class="muted">Explore the world around us</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SUBJECT -->
+<section id="subject" class="screen">
+
+  <button class="button back" onclick="show('home')">
+    ← Home
+  </button>
+
+  <h1 id="subjectTitle"></h1>
+
+  <p class="muted">
+    Choose a unit to begin your adventure.
+  </p>
+
+  <div id="unitList" class="grid"></div>
+
+</section>
+
+
+<!-- UNIT -->
+<section id="unit" class="screen">
+
+  <button class="button back" onclick="openSubject(currentSubject)">
+    ← Units
+  </button>
+
+  <div class="card">
+
+    <span id="unitBadge" class="badge"></span>
+
+    <h1 id="unitTitle"></h1>
+
+    <p id="unitDescription" class="muted"></p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">📖</div>
+      <h2>Learn</h2>
+      <p class="muted">
+        Explore notes and examples before practising.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">✏️</div>
+      <h2>Practice</h2>
+      <p class="muted">
+        Practise with random questions.
+      </p>
+
+      <button class="button" onclick="startQuiz('practice')">
+        Start Practice
+      </button>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏆</div>
+      <h2>Quest</h2>
+      <p class="muted">
+        Challenge yourself and earn XP!
+      </p>
+
+      <button class="button" onclick="startQuiz('quest')">
+        Start Quest
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QUIZ -->
+<section id="quiz" class="screen">
+
+  <button class="button back"
+          onclick="openUnit(currentSubject,currentUnit)">
+    ← Exit
+  </button>
+
+  <div class="card">
+
+    <span id="quizType" class="badge"></span>
+
+    <div style="margin-top:15px" class="progress">
+      <span id="quizProgress"></span>
+    </div>
+
+    <div id="question" class="question"></div>
+
+    <div id="answers" class="answers"></div>
+
+    <p id="feedback"></p>
+
+    <button
+      id="nextButton"
+      class="button"
+      style="display:none"
+      onclick="nextQuestion()">
+      Next →
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- RESULT -->
+<section id="result" class="screen">
+
+  <div class="card center">
+
+    <div style="font-size:60px">
+      🎉
+    </div>
+
+    <h1>Quest Complete!</h1>
+
+    <div id="score" class="score"></div>
+
+    <p id="resultMessage" class="muted"></p>
+
+    <h2 id="stars"></h2>
+
+    <h2 id="earnedXP"></h2>
+
+    <button class="button"
+            onclick="openUnit(currentSubject,currentUnit)">
+      Try Again
+    </button>
+
+    <button class="button back"
+            onclick="show('home')">
+      Home
+    </button>
+
+  </div>
+
+</section>
+
+<footer>
+  TicerAinaaEdu Quest • Year 1 Prototype
+</footer>
+
+</div>
+
+
+<script>
+
+const subjects = {
+
+  BM: {
+    name: "📘 Bahasa Melayu",
+    units: [
+      ["Unit 1", "Kawan Baharu",
+       "Kosa kata dan ayat mudah."],
+
+      ["Unit 2", "Keluarga Saya",
+       "Kosa kata keluarga dan bina ayat."],
+
+      ["Unit 3", "Di Sekolah",
+       "Kosa kata berkaitan sekolah."]
+    ]
+  },
+
+  ENG: {
+    name: "🇬🇧 English",
+    units: [
+      ["Unit 1", "At School",
+       "Basic classroom vocabulary."],
+
+      ["Unit 2", "My Family",
+       "Family vocabulary and sentences."],
+
+      ["Unit 3", "Let's Play",
+       "Common verbs and instructions."]
+    ]
+  },
+
+  MATH: {
+    name: "🔢 Mathematics",
+    units: [
+      ["Unit 1", "Numbers",
+       "Recognise and compare numbers."],
+
+      ["Unit 2", "Addition & Subtraction",
+       "Basic mathematical operations."],
+
+      ["Unit 3", "Money",
+       "Recognise Malaysian coins and notes."]
+    ]
+  },
+
+  SCI: {
+    name: "🔬 Science",
+    units: [
+      ["Unit 1", "My Body",
+       "Identify basic body parts."],
+
+      ["Unit 2", "My Senses",
+       "Explore the five senses."],
+
+      ["Unit 3", "Living Things",
+       "Explore basic characteristics of living things."]
+    ]
+  }
+
+};
+
+
+const questionBank = {
+
+  BM: [
+
+    ["Apakah huruf pertama dalam perkataan 'buku'?",
+     ["a","b","c","d"], "b"],
+
+    ["Pilih perkataan yang betul: Saya ___ nasi.",
+     ["makan","tidur","lari","main"], "makan"],
+
+    ["Manakah ayat yang betul?",
+     ["Ali pergi ke sekolah.",
+      "Ali sekolah pergi.",
+      "Pergi Ali sekolah.",
+      "Sekolah Ali pergi."],
+     "Ali pergi ke sekolah."]
+  ],
+
+
+  ENG: [
+
+    ["Choose the correct word: I ___ a pupil.",
+     ["am","is","are","be"], "am"],
+
+    ["Which word means 'besar'?",
+     ["small","big","short","cold"], "big"],
+
+    ["Choose the correct sentence.",
+     ["She has a book.",
+      "She have a book.",
+      "She book has.",
+      "She having book."],
+     "She has a book."]
+  ],
+
+
+  MATH: [
+
+    ["What is 5 + 3?",
+     ["6","7","8","9"], "8"],
+
+    ["Which number is greater?",
+     ["6","9","7","5"], "9"],
+
+    ["What is 10 - 4?",
+     ["4","5","6","7"], "6"]
+  ],
+
+
+  SCI: [
+
+    ["Which body part do we use to see?",
+     ["Eyes","Ears","Nose","Hands"], "Eyes"],
+
+    ["Which is a living thing?",
+     ["Chair","Cat","Book","Table"], "Cat"],
+
+    ["Which sense helps us hear sounds?",
+     ["Sight","Hearing","Taste","Touch"], "Hearing"]
+  ]
+
+};
+
+
+let currentSubject = "BM";
+let currentUnit = 0;
+
+let quizQuestions = [];
+let questionIndex = 0;
+let score = 0;
+let totalQuestions = 10;
+let totalXP = 0;
+
+
+function show(id) {
+
+  document.querySelectorAll(".screen")
+    .forEach(screen => screen.classList.remove("active"));
+
+  document.getElementById(id)
+    .classList.add("active");
+
+  window.scrollTo(0,0);
+}
+
+
+function openSubject(subject) {
+
+  currentSubject = subject;
+
+  document.getElementById("subjectTitle")
+    .textContent = subjects[subject].name;
+
+  const list = document.getElementById("unitList");
+
+  list.innerHTML = "";
+
+  subjects[subject].units.forEach((unit,index) => {
+
+    list.innerHTML += `
+
+      <div class="card unit"
+           onclick="openUnit('${subject}',${index})">
+
+        <span class="badge">
+          ${unit[0]}
+        </span>
+
+        <h2>${unit[1]}</h2>
+
+        <p class="muted">
+          ${unit[2]}
+        </p>
+
+      </div>
+
+    `;
+
+  });
+
+  show("subject");
+}
+
+
+function openUnit(subject,index) {
+
+  currentSubject = subject;
+  currentUnit = index;
+
+  const unit = subjects[subject].units[index];
+
+  document.getElementById("unitBadge")
+    .textContent =
+    subjects[subject].name + " • " + unit[0];
+
+  document.getElementById("unitTitle")
+    .textContent = unit[1];
+
+  document.getElementById("unitDescription")
+    .textContent = unit[2];
+
+  show("unit");
+}
+
+
+function startQuiz(type) {
+
+  questionIndex = 0;
+  score = 0;
+
+  document.getElementById("quizType")
+    .textContent =
+    type === "practice"
+    ? "✏️ PRACTICE"
+    : "🏆 QUEST";
+
+  /*
+     Duplicate the small demo bank so the prototype
+     can demonstrate randomisation.
+
+     Later we replace this with 50–60+
+     questions per unit.
+  */
+
+  let bank = [...questionBank[currentSubject]];
+
+  quizQuestions = [];
+
+  while (quizQuestions.length < totalQuestions) {
+
+    quizQuestions.push(
+      bank[Math.floor(Math.random() * bank.length)]
+    );
+
+  }
+
+  show("quiz");
+
+  renderQuestion();
+}
+
+
+function renderQuestion() {
+
+  const q = quizQuestions[questionIndex];
+
+  document.getElementById("quizProgress")
+    .style.width =
+    ((questionIndex / totalQuestions) * 100) + "%";
+
+  document.getElementById("question")
+    .textContent =
+    (questionIndex + 1) + ". " + q[0];
+
+  const answers =
+    [...q[1]].sort(() => Math.random() - 0.5);
+
+  const container =
+    document.getElementById("answers");
+
+  container.innerHTML = "";
+
+  answers.forEach(answer => {
+
+    const button =
+      document.createElement("button");
+
+    button.className = "answer";
+
+    button.textContent = answer;
+
+    button.onclick = () =>
+      checkAnswer(button,answer);
+
+    container.appendChild(button);
+
+  });
+
+  document.getElementById("feedback")
+    .textContent = "";
+
+  document.getElementById("nextButton")
+    .style.display = "none";
+}
+
+
+function checkAnswer(button,answer) {
+
+  document.querySelectorAll(".answer")
+    .forEach(b => b.disabled = true);
+
+  const correct =
+    quizQuestions[questionIndex][2];
+
+  if(answer === correct) {
+
+    button.classList.add("correct");
+
+    score++;
+
+    document.getElementById("feedback")
+      .textContent =
+      "✅ Correct! Great job!";
+
+  } else {
+
+    button.classList.add("wrong");
+
+    document.getElementById("feedback")
+      .textContent =
+      "❌ Not quite. Keep trying!";
+
+    document.querySelectorAll(".answer")
+      .forEach(b => {
+
+        if(b.textContent === correct)
+          b.classList.add("correct");
+
+      });
+
+  }
+
+  document.getElementById("nextButton")
+    .style.display = "inline-block";
+}
+
+
+function nextQuestion() {
+
+  questionIndex++;
+
+  if(questionIndex < totalQuestions) {
+
+    renderQuestion();
+
+  } else {
+
+    finishQuiz();
+
+  }
+
+}
+
+
+function finishQuiz() {
+
+  const percentage =
+    Math.round((score / totalQuestions) * 100);
+
+  const earned =
+    score * 10;
+
+  totalXP += earned;
+
+  document.getElementById("xp")
+    .textContent = totalXP;
+
+  document.getElementById("mainProgress")
+    .style.width =
+    Math.min(100,10 + totalXP) + "%";
+
+  document.getElementById("score")
+    .textContent =
+    score + "/" + totalQuestions;
+
+  document.getElementById("resultMessage")
+    .textContent =
+    "You scored " + percentage + "%!";
+
+  document.getElementById("earnedXP")
+    .textContent =
+    "+" + earned + " XP ⭐";
+
+  if(percentage >= 90) {
+
+    document.getElementById("stars")
+      .textContent = "⭐⭐⭐⭐⭐ Excellent!";
+
+  } else if(percentage >= 70) {
+
+    document.getElementById("stars")
+      .textContent = "⭐⭐⭐⭐ Great job!";
+
+  } else if(percentage >= 50) {
+
+    document.getElementById("stars")
+      .textContent = "⭐⭐⭐ Keep going!";
+
+  } else {
+
+    document.getElementById("stars")
+      .textContent = "⭐⭐ Keep practising!";
+
+  }
+
+  show("result");
+}
+
+</script>
+
+</body>
+  </html>
