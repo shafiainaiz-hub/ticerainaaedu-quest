@@ -367,7 +367,7 @@ const BM_TAHUN1 = {
 {
   q: "Kita perlu ______ keluarga kita.",
   options: ["menyayangi", "mengejek", "memukul", "mengganggu"],
-  answer: "bahagia"
+  answer: "menyayangi"
     }
   ]
 },
