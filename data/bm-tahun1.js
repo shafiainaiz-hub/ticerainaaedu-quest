@@ -196,7 +196,183 @@ const BM_TAHUN1 = {
             "Sayang saya keluarga."
           ],
           answer: "Saya sayang keluarga saya."
-        }
+        }, 
+
+        {
+  q: "Huruf pertama dalam perkataan 'ibu' ialah...",
+  options: ["I", "B", "U", "M"],
+  answer: "I"
+},
+{
+  q: "Huruf terakhir dalam perkataan 'ibu' ialah...",
+  options: ["I", "B", "U", "A"],
+  answer: "U"
+},
+{
+  q: "Perkataan manakah mempunyai huruf A?",
+  options: ["Ayah", "Ibu", "Emak", "Adik"],
+  answer: "Ayah"
+},
+{
+  q: "Perkataan manakah mempunyai huruf E?",
+  options: ["Emak", "Ayah", "Adik", "Abang"],
+  answer: "Emak"
+},
+{
+  q: "Perkataan manakah mempunyai huruf I?",
+  options: ["Ibu", "Ayah", "Emak", "Abang"],
+  answer: "Ibu"
+},
+{
+  q: "Perkataan manakah mempunyai huruf O?",
+  options: ["Ibu", "Ayah", "Kakak", "Adik"],
+  answer: "Kakak"
+},
+{
+  q: "Perkataan manakah mempunyai huruf U?",
+  options: ["Ayah", "Ibu", "Emak", "Abang"],
+  answer: "Ibu"
+},
+{
+  q: "Pilih perkataan yang bermula dengan huruf B.",
+  options: ["Bapa", "Ibu", "Emak", "Adik"],
+  answer: "Bapa"
+},
+{
+  q: "Pilih perkataan yang bermula dengan huruf K.",
+  options: ["Kakak", "Ibu", "Ayah", "Emak"],
+  answer: "Kakak"
+},
+{
+  q: "Pilih perkataan yang bermula dengan huruf A.",
+  options: ["Adik", "Ibu", "Emak", "Kakak"],
+  answer: "Adik"
+},
+{
+  q: "Manakah pasangan yang betul?",
+  options: [
+    "Ibu — keluarga",
+    "Meja — keluarga",
+    "Pensel — keluarga",
+    "Buku — keluarga"
+  ],
+  answer: "Ibu — keluarga"
+},
+{
+  q: "Siapakah adik kepada kita?",
+  options: ["Ahli keluarga", "Guru", "Jiran", "Peniaga"],
+  answer: "Ahli keluarga"
+},
+{
+  q: "Apakah yang patut kita lakukan terhadap keluarga?",
+  options: ["Menyayangi", "Mengganggu", "Memukul", "Mengejek"],
+  answer: "Menyayangi"
+},
+{
+  q: "Ayat manakah menunjukkan kasih sayang?",
+  options: [
+    "Saya sayang ibu.",
+    "Saya marah ibu.",
+    "Saya mengejek ibu.",
+    "Saya mengganggu ibu."
+  ],
+  answer: "Saya sayang ibu."
+},
+{
+  q: "Pilih ayat yang betul.",
+  options: [
+    "Ini ayah saya.",
+    "Ini saya ayah.",
+    "Ayah ini saya.",
+    "Saya ini ayah."
+  ],
+  answer: "Ini ayah saya."
+},
+{
+  q: "Pilih ayat yang betul.",
+  options: [
+    "Ini adik saya.",
+    "Ini saya adik.",
+    "Adik saya ini.",
+    "Saya adik ini."
+  ],
+  answer: "Ini adik saya."
+},
+{
+  q: "Pilih ayat yang betul.",
+  options: [
+    "Ini kakak saya.",
+    "Ini saya kakak.",
+    "Kakak ini saya.",
+    "Saya ini kakak."
+  ],
+  answer: "Ini kakak saya."
+},
+{
+  q: "Pilih perkataan yang mempunyai dua suku kata.",
+  options: ["ibu", "air", "jam", "bas"],
+  answer: "ibu"
+},
+{
+  q: "Pilih perkataan yang mempunyai dua suku kata.",
+  options: ["ayah", "jam", "bas", "cat"],
+  answer: "ayah"
+},
+{
+  q: "Pilih perkataan yang mempunyai dua suku kata.",
+  options: ["adik", "meja", "ibu", "bola"],
+  answer: "adik"
+},
+{
+  q: "Suku kata pertama dalam perkataan 'ibu' ialah...",
+  options: ["i", "bu", "ib", "u"],
+  answer: "i"
+},
+{
+  q: "Suku kata kedua dalam perkataan 'ibu' ialah...",
+  options: ["i", "bu", "ib", "u"],
+  answer: "bu"
+},
+{
+  q: "Perkataan 'ibu' bermula dengan bunyi...",
+  options: ["i", "b", "u", "m"],
+  answer: "i"
+},
+{
+  q: "Perkataan 'ayah' bermula dengan huruf...",
+  options: ["A", "Y", "H", "I"],
+  answer: "A"
+},
+{
+  q: "Perkataan 'adik' berakhir dengan huruf...",
+  options: ["A", "D", "I", "K"],
+  answer: "K"
+},
+{
+  q: "Perkataan 'emak' bermula dengan huruf...",
+  options: ["E", "M", "A", "K"],
+  answer: "E"
+},
+{
+  q: "Yang manakah bukan ahli keluarga?",
+  options: ["Ibu", "Ayah", "Kakak", "Pensel"],
+  answer: "Pensel"
+},
+{
+  q: "Yang manakah bukan ahli keluarga?",
+  options: ["Adik", "Abang", "Meja", "Ibu"],
+  answer: "Meja"
+},
+{
+  q: "Kita perlu ______ keluarga kita.",
+  options: ["menyayangi", "mengejek", "memukul", "mengganggu"],
+  answer: "menyayangi"
+},
+{
+  q: "Keluarga yang saling menyayangi akan hidup dengan...",
+  options: ["bahagia", "marah", "sedih", "takut"],
+  answer: "bahagia"
+}
       ]
     }
   ]
