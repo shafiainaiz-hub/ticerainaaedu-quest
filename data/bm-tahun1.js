@@ -753,8 +753,10 @@ const BM_TAHUN1 = {
         "Saya mengejek keluarga saya.",
         "Saya memukul keluarga saya."
       ],
-      answer: "Saya sayang keluarga saya." 
-    ]
+      answer: "Saya sayang keluarga saya."
+    }
+   ]
+  }, 
 
     {
   id: "bm3",
