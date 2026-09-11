@@ -6,197 +6,317 @@
 <title>TicerAinaaEdu Quest</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f7f5ff;
-  color: #24243a;
+body{
+  background:#f7f8fc;
+  color:#263238;
 }
 
-header {
-  background: linear-gradient(135deg, #7567e8, #a78bfa);
-  color: white;
-  padding: 28px 20px;
-  border-radius: 0 0 28px 28px;
+header{
+  background:linear-gradient(135deg,#7c4dff,#536dfe);
+  color:white;
+  padding:22px 18px;
+  text-align:center;
+  border-radius:0 0 28px 28px;
 }
 
-.logo {
-  font-size: 25px;
-  font-weight: bold;
+header h1{
+  font-size:25px;
 }
 
-.tagline {
-  margin-top: 6px;
-  opacity: .9;
+header p{
+  margin-top:6px;
+  opacity:.9;
+  font-size:14px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 25px 18px 50px;
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
 }
 
-.screen {
-  display: none;
+.screen{
+  display:none;
 }
 
-.screen.active {
-  display: block;
+.screen.active{
+  display:block;
 }
 
-.hero {
-  background: white;
-  padding: 28px;
-  border-radius: 24px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.06);
+.welcome{
+  text-align:center;
+  margin:20px 0 25px;
 }
 
-h1 {
-  font-size: 32px;
+.welcome h2{
+  font-size:25px;
+  margin-bottom:8px;
 }
 
-h2 {
-  margin-top: 25px;
+.welcome p{
+  color:#697386;
 }
 
-.muted {
-  color: #77778a;
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:20px 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
+.stat{
+  background:white;
+  padding:15px 8px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.06);
 }
 
-.card {
-  background: white;
-  border: 1px solid #ecebf4;
-  border-radius: 20px;
-  padding: 22px;
-  box-shadow: 0 6px 20px rgba(0,0,0,.04);
+.stat strong{
+  display:block;
+  font-size:22px;
+  margin-bottom:5px;
 }
 
-.subject {
-  cursor: pointer;
-  transition: .2s;
+.stat span{
+  font-size:12px;
+  color:#777;
 }
 
-.subject:hover {
-  transform: translateY(-4px);
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-.icon {
-  font-size: 42px;
+.card{
+  background:white;
+  padding:22px;
+  border-radius:22px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+  cursor:pointer;
+  transition:.2s;
 }
 
-.button {
-  border: none;
-  border-radius: 12px;
-  padding: 12px 18px;
-  background: #7567e8;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+.card:hover{
+  transform:translateY(-3px);
 }
 
-.button:hover {
-  opacity: .9;
+.subject-icon{
+  font-size:42px;
+  margin-bottom:10px;
 }
 
-.back {
-  background: #eeeeF8;
-  color: #44445b;
-  margin-bottom: 15px;
+.card h3{
+  margin-bottom:5px;
 }
 
-.unit {
-  cursor: pointer;
+.card p{
+  color:#777;
+  font-size:13px;
 }
 
-.unit:hover {
-  border-color: #7567e8;
+.progress{
+  height:8px;
+  background:#eceff4;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:12px;
 }
 
-.badge {
-  display: inline-block;
-  background: #eeeaff;
-  color: #6255d6;
-  padding: 6px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: bold;
+.progress div{
+  height:100%;
+  background:#7c4dff;
+  width:0%;
 }
 
-.progress {
-  height: 10px;
-  background: #e9e8f0;
-  border-radius: 20px;
-  overflow: hidden;
+.back{
+  border:none;
+  background:white;
+  padding:10px 15px;
+  border-radius:12px;
+  cursor:pointer;
+  margin-bottom:18px;
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
 }
 
-.progress span {
-  display: block;
-  height: 100%;
-  background: #7567e8;
+.page-title{
+  margin-bottom:18px;
 }
 
-.question {
-  font-size: 23px;
-  font-weight: bold;
-  margin: 25px 0;
+.unit-card{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:14px;
+  box-shadow:0 4px 15px rgba(0,0,0,.06);
 }
 
-.answers {
-  display: grid;
-  gap: 12px;
+.unit-card h3{
+  margin-bottom:5px;
 }
 
-.answer {
-  padding: 15px;
-  background: white;
-  border: 2px solid #e7e6ef;
-  border-radius: 14px;
-  cursor: pointer;
-  text-align: left;
-  font-size: 16px;
+.unit-card p{
+  color:#777;
+  font-size:13px;
+  margin-bottom:15px;
 }
 
-.answer:hover {
-  border-color: #7567e8;
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
 }
 
-.correct {
-  background: #e8f8ef !important;
-  border-color: #35ae70 !important;
+button{
+  border:none;
+  cursor:pointer;
 }
 
-.wrong {
-  background: #fff0f2 !important;
-  border-color: #e25d6a !important;
+.action{
+  padding:11px 8px;
+  border-radius:12px;
+  font-weight:bold;
+  font-size:12px;
 }
 
-.score {
-  font-size: 48px;
-  font-weight: bold;
-  color: #7567e8;
-  text-align: center;
+.learn{
+  background:#e8eaf6;
+  color:#3949ab;
 }
 
-.center {
-  text-align: center;
+.practice{
+  background:#e0f2f1;
+  color:#00796b;
 }
 
-footer {
-  text-align: center;
-  color: #888;
-  font-size: 13px;
-  margin-top: 30px;
+.quest{
+  background:#fff3e0;
+  color:#ef6c00;
+}
+
+.quiz-box{
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.question-number{
+  color:#7c4dff;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.question{
+  font-size:21px;
+  font-weight:bold;
+  margin-bottom:22px;
+  line-height:1.4;
+}
+
+.options{
+  display:grid;
+  gap:12px;
+}
+
+.option{
+  background:#f5f6fa;
+  padding:15px;
+  border-radius:14px;
+  text-align:left;
+  font-size:15px;
+}
+
+.option:hover{
+  background:#e8eaf6;
+}
+
+.option.correct{
+  background:#c8e6c9;
+}
+
+.option.wrong{
+  background:#ffcdd2;
+}
+
+.feedback{
+  margin-top:18px;
+  padding:15px;
+  border-radius:15px;
+  display:none;
+}
+
+.next{
+  width:100%;
+  background:#7c4dff;
+  color:white;
+  padding:14px;
+  border-radius:14px;
+  margin-top:18px;
+  font-weight:bold;
+}
+
+.result{
+  text-align:center;
+  background:white;
+  padding:35px 20px;
+  border-radius:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.result .big{
+  font-size:60px;
+}
+
+.result h2{
+  margin:15px 0;
+}
+
+.result button{
+  background:#7c4dff;
+  color:white;
+  padding:14px 25px;
+  border-radius:14px;
+  margin-top:20px;
+}
+
+.learn-box{
+  background:white;
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  line-height:1.7;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 14px;
+  background:#fff3cd;
+  border-radius:20px;
+  margin-top:12px;
+  font-size:13px;
+}
+
+@media(max-width:600px){
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .buttons{
+    grid-template-columns:1fr;
+  }
+
+  .question{
+    font-size:18px;
+  }
 }
 </style>
 </head>
@@ -204,8 +324,8 @@ footer {
 <body>
 
 <header>
-  <div class="logo">🎓 TicerAinaaEdu Quest</div>
-  <div class="tagline">Learn • Play • Practice • Quest</div>
+  <h1>🎓 TicerAinaaEdu Quest</h1>
+  <p>Learn • Play • Practice • Quest</p>
 </header>
 
 <div class="container">
@@ -213,50 +333,58 @@ footer {
 <!-- HOME -->
 <section id="home" class="screen active">
 
-  <div class="hero">
-    <span class="badge">YEAR 1</span>
+  <div class="welcome">
+    <h2>Hi, Little Learner! 👋</h2>
+    <p>Let's learn something new today.</p>
+  </div>
 
-    <h1>Welcome to your learning adventure! 🚀</h1>
+  <div class="stats">
+    <div class="stat">
+      <strong id="xp">0</strong>
+      <span>⭐ XP</span>
+    </div>
 
-    <p class="muted">
-      Choose your favourite subject and start your quest.
-    </p>
+    <div class="stat">
+      <strong id="stars">0</strong>
+      <span>🌟 Stars</span>
+    </div>
 
-    <p>
-      ⭐ <b id="xp">0</b> XP
-    </p>
-
-    <div class="progress">
-      <span id="mainProgress" style="width:10%"></span>
+    <div class="stat">
+      <strong id="badges">0</strong>
+      <span>🏆 Badges</span>
     </div>
   </div>
 
-  <h2>📚 Choose a Subject</h2>
+  <h2 style="margin-bottom:15px;">📚 Year 1 Subjects</h2>
 
   <div class="grid">
 
-    <div class="card subject" onclick="openSubject('BM')">
-      <div class="icon">📘</div>
-      <h2>Bahasa Melayu</h2>
-      <p class="muted">Membaca • Menulis • Bahasa</p>
+    <div class="card" onclick="openSubject('bm')">
+      <div class="subject-icon">🇲🇾</div>
+      <h3>Bahasa Melayu</h3>
+      <p>Membaca • Menulis • Bahasa</p>
+      <div class="progress"><div id="pbm"></div></div>
     </div>
 
-    <div class="card subject" onclick="openSubject('ENG')">
-      <div class="icon">🇬🇧</div>
-      <h2>English</h2>
-      <p class="muted">Vocabulary • Grammar • Reading</p>
+    <div class="card" onclick="openSubject('english')">
+      <div class="subject-icon">🇬🇧</div>
+      <h3>English</h3>
+      <p>Words • Grammar • Reading</p>
+      <div class="progress"><div id="penglish"></div></div>
     </div>
 
-    <div class="card subject" onclick="openSubject('MATH')">
-      <div class="icon">🔢</div>
-      <h2>Mathematics</h2>
-      <p class="muted">Numbers • Operations • Problem Solving</p>
+    <div class="card" onclick="openSubject('math')">
+      <div class="subject-icon">🔢</div>
+      <h3>Mathematics</h3>
+      <p>Numbers • Operations • Problem Solving</p>
+      <div class="progress"><div id="pmath"></div></div>
     </div>
 
-    <div class="card subject" onclick="openSubject('SCI')">
-      <div class="icon">🔬</div>
-      <h2>Science</h2>
-      <p class="muted">Explore the world around us</p>
+    <div class="card" onclick="openSubject('science')">
+      <div class="subject-icon">🔬</div>
+      <h3>Science</h3>
+      <p>Explore • Discover • Understand</p>
+      <div class="progress"><div id="pscience"></div></div>
     </div>
 
   </div>
@@ -267,70 +395,35 @@ footer {
 <!-- SUBJECT -->
 <section id="subject" class="screen">
 
-  <button class="button back" onclick="show('home')">
-    ← Home
-  </button>
+  <button class="back" onclick="goHome()">← Back</button>
 
-  <h1 id="subjectTitle"></h1>
+  <div class="page-title">
+    <h2 id="subjectTitle"></h2>
+    <p id="subjectDescription"></p>
+  </div>
 
-  <p class="muted">
-    Choose a unit to begin your adventure.
-  </p>
-
-  <div id="unitList" class="grid"></div>
+  <div id="unitList"></div>
 
 </section>
 
 
-<!-- UNIT -->
-<section id="unit" class="screen">
+<!-- LEARN -->
+<section id="learn" class="screen">
 
-  <button class="button back" onclick="openSubject(currentSubject)">
-    ← Units
-  </button>
+  <button class="back" onclick="backToSubject()">← Back</button>
 
-  <div class="card">
+  <div class="learn-box">
 
-    <span id="unitBadge" class="badge"></span>
+    <h2 id="learnTitle"></h2>
 
-    <h1 id="unitTitle"></h1>
+    <br>
 
-    <p id="unitDescription" class="muted"></p>
+    <div id="learnContent"></div>
 
-  </div>
+    <br>
 
-  <div class="grid">
-
-    <div class="card">
-      <div class="icon">📖</div>
-      <h2>Learn</h2>
-      <p class="muted">
-        Explore notes and examples before practising.
-      </p>
-    </div>
-
-    <div class="card">
-      <div class="icon">✏️</div>
-      <h2>Practice</h2>
-      <p class="muted">
-        Practise with random questions.
-      </p>
-
-      <button class="button" onclick="startQuiz('practice')">
-        Start Practice
-      </button>
-    </div>
-
-    <div class="card">
-      <div class="icon">🏆</div>
-      <h2>Quest</h2>
-      <p class="muted">
-        Challenge yourself and earn XP!
-      </p>
-
-      <button class="button" onclick="startQuiz('quest')">
-        Start Quest
-      </button>
+    <div class="badge">
+      💡 Tip: Learn a little every day!
     </div>
 
   </div>
@@ -341,31 +434,20 @@ footer {
 <!-- QUIZ -->
 <section id="quiz" class="screen">
 
-  <button class="button back"
-          onclick="openUnit(currentSubject,currentUnit)">
-    ← Exit
-  </button>
+  <button class="back" onclick="backToSubject()">← Back</button>
 
-  <div class="card">
+  <div class="quiz-box">
 
-    <span id="quizType" class="badge"></span>
+    <div class="question-number" id="questionNumber"></div>
 
-    <div style="margin-top:15px" class="progress">
-      <span id="quizProgress"></span>
-    </div>
+    <div class="question" id="question"></div>
 
-    <div id="question" class="question"></div>
+    <div class="options" id="options"></div>
 
-    <div id="answers" class="answers"></div>
+    <div class="feedback" id="feedback"></div>
 
-    <p id="feedback"></p>
-
-    <button
-      id="nextButton"
-      class="button"
-      style="display:none"
-      onclick="nextQuestion()">
-      Next →
+    <button class="next" id="nextButton" onclick="nextQuestion()" style="display:none;">
+      Next Question →
     </button>
 
   </div>
@@ -376,184 +458,382 @@ footer {
 <!-- RESULT -->
 <section id="result" class="screen">
 
-  <div class="card center">
+  <div class="result">
 
-    <div style="font-size:60px">
-      🎉
-    </div>
+    <div class="big">🏆</div>
 
-    <h1>Quest Complete!</h1>
+    <h2>Quest Complete!</h2>
 
-    <div id="score" class="score"></div>
+    <p id="resultText"></p>
 
-    <p id="resultMessage" class="muted"></p>
+    <h3 id="resultXP" style="margin-top:15px;"></h3>
 
-    <h2 id="stars"></h2>
+    <div id="resultStars" style="font-size:28px;margin-top:12px;"></div>
 
-    <h2 id="earnedXP"></h2>
-
-    <button class="button"
-            onclick="openUnit(currentSubject,currentUnit)">
-      Try Again
-    </button>
-
-    <button class="button back"
-            onclick="show('home')">
-      Home
-    </button>
+    <button onclick="backToSubject()">Continue Learning</button>
 
   </div>
 
 </section>
-
-<footer>
-  TicerAinaaEdu Quest • Year 1 Prototype
-</footer>
 
 </div>
 
 
 <script>
 
+/* =========================
+   USER PROGRESS
+========================= */
+
+let progressData = JSON.parse(
+  localStorage.getItem("ticerAinaaProgress")
+) || {
+  xp:0,
+  stars:0,
+  badges:0,
+  completed:{}
+};
+
+function saveProgress(){
+
+  localStorage.setItem(
+    "ticerAinaaProgress",
+    JSON.stringify(progressData)
+  );
+
+  updateStats();
+}
+
+function updateStats(){
+
+  document.getElementById("xp").textContent = progressData.xp;
+
+  document.getElementById("stars").textContent = progressData.stars;
+
+  document.getElementById("badges").textContent = progressData.badges;
+
+}
+
+
+/* =========================
+   SUBJECT DATA
+========================= */
+
 const subjects = {
 
-  BM: {
-    name: "📘 Bahasa Melayu",
-    units: [
-      ["Unit 1", "Kawan Baharu",
-       "Kosa kata dan ayat mudah."],
-
-      ["Unit 2", "Keluarga Saya",
-       "Kosa kata keluarga dan bina ayat."],
-
-      ["Unit 3", "Di Sekolah",
-       "Kosa kata berkaitan sekolah."]
+  bm:{
+    title:"🇲🇾 Bahasa Melayu",
+    description:"Jom belajar Bahasa Melayu dengan cara yang menyeronokkan!",
+    units:[
+      {
+        id:"bm1",
+        title:"Unit 1: Kawan Baharu",
+        description:"Kenali rakan dan gunakan ayat mudah.",
+        learn:"<h3>👋 Mari Berkenalan</h3><p>Kita boleh memperkenalkan diri dengan menyebut nama, umur dan perkara yang kita suka.</p><p>Contoh: <b>Nama saya Ali.</b></p>"
+      },
+      {
+        id:"bm2",
+        title:"Unit 2: Keluarga Saya",
+        description:"Kenali ahli keluarga.",
+        learn:"<h3>👨‍👩‍👧 Keluarga</h3><p>Keluarga terdiri daripada orang yang kita sayangi seperti ibu, ayah, abang, kakak dan adik.</p>"
+      },
+      {
+        id:"bm3",
+        title:"Unit 3: Di Sekolah",
+        description:"Kenali suasana sekolah.",
+        learn:"<h3>🏫 Sekolah</h3><p>Di sekolah kita belajar, membaca, menulis dan bermain bersama rakan.</p>"
+      }
     ]
   },
 
-  ENG: {
-    name: "🇬🇧 English",
-    units: [
-      ["Unit 1", "At School",
-       "Basic classroom vocabulary."],
-
-      ["Unit 2", "My Family",
-       "Family vocabulary and sentences."],
-
-      ["Unit 3", "Let's Play",
-       "Common verbs and instructions."]
+  english:{
+    title:"🇬🇧 English",
+    description:"Let's learn English words and simple sentences!",
+    units:[
+      {
+        id:"en1",
+        title:"Unit 1: At School",
+        description:"Learn simple school vocabulary.",
+        learn:"<h3>🏫 At School</h3><p>We can see many things at school such as a <b>book, pencil, bag</b> and <b>chair</b>.</p>"
+      },
+      {
+        id:"en2",
+        title:"Unit 2: My Family",
+        description:"Learn words about family.",
+        learn:"<h3>👨‍👩‍👧 My Family</h3><p>Family words include <b>father, mother, brother</b> and <b>sister</b>.</p>"
+      },
+      {
+        id:"en3",
+        title:"Unit 3: Let's Play",
+        description:"Talk about simple activities.",
+        learn:"<h3>⚽ Let's Play</h3><p>We can play football, run, jump and play with our friends.</p>"
+      }
     ]
   },
 
-  MATH: {
-    name: "🔢 Mathematics",
-    units: [
-      ["Unit 1", "Numbers",
-       "Recognise and compare numbers."],
-
-      ["Unit 2", "Addition & Subtraction",
-       "Basic mathematical operations."],
-
-      ["Unit 3", "Money",
-       "Recognise Malaysian coins and notes."]
+  math:{
+    title:"🔢 Mathematics",
+    description:"Let's count, calculate and solve problems!",
+    units:[
+      {
+        id:"math1",
+        title:"Unit 1: Numbers",
+        description:"Learn about numbers.",
+        learn:"<h3>🔢 Numbers</h3><p>Numbers help us count objects. Example: 1, 2, 3, 4, 5.</p>"
+      },
+      {
+        id:"math2",
+        title:"Unit 2: Addition & Subtraction",
+        description:"Practise simple calculations.",
+        learn:"<h3>➕ Addition</h3><p>Addition means putting numbers together.</p><p>Example: <b>2 + 3 = 5</b></p><h3>➖ Subtraction</h3><p>Subtraction means taking away.</p><p>Example: <b>5 - 2 = 3</b></p>"
+      },
+      {
+        id:"math3",
+        title:"Unit 3: Money",
+        description:"Recognise Malaysian money.",
+        learn:"<h3>💰 Money</h3><p>Malaysia uses Ringgit Malaysia (RM).</p>"
+      }
     ]
   },
 
-  SCI: {
-    name: "🔬 Science",
-    units: [
-      ["Unit 1", "My Body",
-       "Identify basic body parts."],
-
-      ["Unit 2", "My Senses",
-       "Explore the five senses."],
-
-      ["Unit 3", "Living Things",
-       "Explore basic characteristics of living things."]
+  science:{
+    title:"🔬 Science",
+    description:"Explore the world around us!",
+    units:[
+      {
+        id:"sci1",
+        title:"Unit 1: My Body",
+        description:"Learn about parts of the body.",
+        learn:"<h3>🧍 My Body</h3><p>Our body has many parts such as the head, eyes, ears, nose, mouth, hands and legs.</p>"
+      },
+      {
+        id:"sci2",
+        title:"Unit 2: My Senses",
+        description:"Explore our five senses.",
+        learn:"<h3>👀 Five Senses</h3><p>We use our eyes to see, ears to hear, nose to smell, tongue to taste and skin to touch.</p>"
+      },
+      {
+        id:"sci3",
+        title:"Unit 3: Living Things",
+        description:"Learn about living things.",
+        learn:"<h3>🌱 Living Things</h3><p>Plants and animals are examples of living things.</p>"
+      }
     ]
   }
 
 };
 
 
-const questionBank = {
+/* =========================
+   QUESTION BANK
+========================= */
 
-  BM: [
+const questions = {
 
-    ["Apakah huruf pertama dalam perkataan 'buku'?",
-     ["a","b","c","d"], "b"],
-
-    ["Pilih perkataan yang betul: Saya ___ nasi.",
-     ["makan","tidur","lari","main"], "makan"],
-
-    ["Manakah ayat yang betul?",
-     ["Ali pergi ke sekolah.",
-      "Ali sekolah pergi.",
-      "Pergi Ali sekolah.",
-      "Sekolah Ali pergi."],
-     "Ali pergi ke sekolah."]
+  bm1:[
+    {
+      q:"Apakah nama yang sesuai digunakan untuk memperkenalkan diri?",
+      a:["Nama saya Ali.","Saya meja.","Buku itu merah."],
+      correct:0
+    },
+    {
+      q:"Apakah maksud perkataan 'kawan'?",
+      a:["Rakan","Rumah","Buku"],
+      correct:0
+    },
+    {
+      q:"Pilih ayat yang betul.",
+      a:["Nama saya Sara.","Nama saya makan.","Nama saya sekolah."],
+      correct:0
+    }
   ],
 
-
-  ENG: [
-
-    ["Choose the correct word: I ___ a pupil.",
-     ["am","is","are","be"], "am"],
-
-    ["Which word means 'besar'?",
-     ["small","big","short","cold"], "big"],
-
-    ["Choose the correct sentence.",
-     ["She has a book.",
-      "She have a book.",
-      "She book has.",
-      "She having book."],
-     "She has a book."]
+  bm2:[
+    {
+      q:"Siapakah ibu kepada kita?",
+      a:["Mother","Ibu","Teacher"],
+      correct:1
+    },
+    {
+      q:"Siapakah bapa kepada kita?",
+      a:["Ayah","Adik","Kakak"],
+      correct:0
+    },
+    {
+      q:"Yang manakah ahli keluarga?",
+      a:["Ibu","Kerusi","Pensel"],
+      correct:0
+    }
   ],
 
-
-  MATH: [
-
-    ["What is 5 + 3?",
-     ["6","7","8","9"], "8"],
-
-    ["Which number is greater?",
-     ["6","9","7","5"], "9"],
-
-    ["What is 10 - 4?",
-     ["4","5","6","7"], "6"]
+  bm3:[
+    {
+      q:"Di manakah murid belajar?",
+      a:["Sekolah","Pasar","Taman"],
+      correct:0
+    },
+    {
+      q:"Apakah alat yang digunakan untuk menulis?",
+      a:["Pensel","Kasut","Cawan"],
+      correct:0
+    }
   ],
 
+  en1:[
+    {
+      q:"What do we use to write?",
+      a:["Pencil","Chair","Bag"],
+      correct:0
+    },
+    {
+      q:"Which one is a school item?",
+      a:["Book","Apple","Cat"],
+      correct:0
+    }
+  ],
 
-  SCI: [
+  en2:[
+    {
+      q:"Who is your mother's husband?",
+      a:["Father","Sister","Brother"],
+      correct:0
+    },
+    {
+      q:"Who is your mother's daughter?",
+      a:["Sister","Father","Grandfather"],
+      correct:0
+    }
+  ],
 
-    ["Which body part do we use to see?",
-     ["Eyes","Ears","Nose","Hands"], "Eyes"],
+  en3:[
+    {
+      q:"Which activity can we do with a ball?",
+      a:["Play","Sleep","Eat"],
+      correct:0
+    },
+    {
+      q:"What do we do with our legs?",
+      a:["Run","Read","Write"],
+      correct:0
+    }
+  ],
 
-    ["Which is a living thing?",
-     ["Chair","Cat","Book","Table"], "Cat"],
+  math1:[
+    {
+      q:"What number comes after 4?",
+      a:["3","5","7"],
+      correct:1
+    },
+    {
+      q:"How many fingers are on one hand?",
+      a:["3","5","10"],
+      correct:1
+    },
+    {
+      q:"Which number is bigger?",
+      a:["2","8","4"],
+      correct:1
+    }
+  ],
 
-    ["Which sense helps us hear sounds?",
-     ["Sight","Hearing","Taste","Touch"], "Hearing"]
+  math2:[
+    {
+      q:"What is 2 + 3?",
+      a:["4","5","6"],
+      correct:1
+    },
+    {
+      q:"What is 5 - 2?",
+      a:["2","3","4"],
+      correct:1
+    },
+    {
+      q:"What is 1 + 4?",
+      a:["3","5","6"],
+      correct:1
+    }
+  ],
+
+  math3:[
+    {
+      q:"Which currency is used in Malaysia?",
+      a:["Ringgit Malaysia","Dollar Australia","Yen"],
+      correct:0
+    },
+    {
+      q:"RM1 is a form of...",
+      a:["Money","Food","Toy"],
+      correct:0
+    }
+  ],
+
+  sci1:[
+    {
+      q:"Which body part do we use to see?",
+      a:["Eyes","Ears","Nose"],
+      correct:0
+    },
+    {
+      q:"Which body part helps us walk?",
+      a:["Legs","Eyes","Ears"],
+      correct:0
+    }
+  ],
+
+  sci2:[
+    {
+      q:"Which sense do we use to hear?",
+      a:["Ears","Eyes","Nose"],
+      correct:0
+    },
+    {
+      q:"Which sense do we use to smell?",
+      a:["Nose","Hands","Eyes"],
+      correct:0
+    },
+    {
+      q:"Which sense do we use to taste?",
+      a:["Tongue","Ear","Eye"],
+      correct:0
+    }
+  ],
+
+  sci3:[
+    {
+      q:"Which is a living thing?",
+      a:["Cat","Chair","Table"],
+      correct:0
+    },
+    {
+      q:"Which is a plant?",
+      a:["Tree","Car","Book"],
+      correct:0
+    }
   ]
 
 };
 
 
-let currentSubject = "BM";
-let currentUnit = 0;
+/* =========================
+   VARIABLES
+========================= */
 
-let quizQuestions = [];
-let questionIndex = 0;
+let currentSubject = "";
+let currentUnit = "";
+let currentQuestions = [];
+let currentQuestion = 0;
 let score = 0;
-let totalQuestions = 10;
-let totalXP = 0;
+let quizType = "";
 
 
-function show(id) {
+/* =========================
+   NAVIGATION
+========================= */
+
+function showScreen(id){
 
   document.querySelectorAll(".screen")
-    .forEach(screen => screen.classList.remove("active"));
+    .forEach(s=>s.classList.remove("active"));
 
   document.getElementById(id)
     .classList.add("active");
@@ -562,196 +842,260 @@ function show(id) {
 }
 
 
-function openSubject(subject) {
+function goHome(){
+
+  showScreen("home");
+  updateStats();
+
+}
+
+
+function openSubject(subject){
 
   currentSubject = subject;
 
-  document.getElementById("subjectTitle")
-    .textContent = subjects[subject].name;
+  const data = subjects[subject];
 
-  const list = document.getElementById("unitList");
+  document.getElementById("subjectTitle").textContent =
+    data.title;
+
+  document.getElementById("subjectDescription").textContent =
+    data.description;
+
+  const list =
+    document.getElementById("unitList");
 
   list.innerHTML = "";
 
-  subjects[subject].units.forEach((unit,index) => {
+  data.units.forEach(unit=>{
 
-    list.innerHTML += `
+    const card = document.createElement("div");
 
-      <div class="card unit"
-           onclick="openUnit('${subject}',${index})">
+    card.className = "unit-card";
 
-        <span class="badge">
-          ${unit[0]}
-        </span>
+    card.innerHTML = `
+      <h3>${unit.title}</h3>
+      <p>${unit.description}</p>
 
-        <h2>${unit[1]}</h2>
+      <div class="buttons">
 
-        <p class="muted">
-          ${unit[2]}
-        </p>
+        <button class="action learn"
+          onclick="openLearn('${unit.id}')">
+          📖 Learn
+        </button>
+
+        <button class="action practice"
+          onclick="startQuiz('${unit.id}','practice')">
+          ✏️ Practice
+        </button>
+
+        <button class="action quest"
+          onclick="startQuiz('${unit.id}','quest')">
+          🚀 Quest
+        </button>
 
       </div>
-
     `;
+
+    list.appendChild(card);
 
   });
 
-  show("subject");
+  showScreen("subject");
 }
 
 
-function openUnit(subject,index) {
+function backToSubject(){
 
-  currentSubject = subject;
-  currentUnit = index;
+  openSubject(currentSubject);
 
-  const unit = subjects[subject].units[index];
-
-  document.getElementById("unitBadge")
-    .textContent =
-    subjects[subject].name + " • " + unit[0];
-
-  document.getElementById("unitTitle")
-    .textContent = unit[1];
-
-  document.getElementById("unitDescription")
-    .textContent = unit[2];
-
-  show("unit");
 }
 
 
-function startQuiz(type) {
+/* =========================
+   LEARN
+========================= */
 
-  questionIndex = 0;
+function openLearn(unitId){
+
+  currentUnit = unitId;
+
+  const unit =
+    subjects[currentSubject]
+    .units
+    .find(u=>u.id===unitId);
+
+  document.getElementById("learnTitle")
+    .textContent = unit.title;
+
+  document.getElementById("learnContent")
+    .innerHTML = unit.learn;
+
+  showScreen("learn");
+}
+
+
+/* =========================
+   QUIZ ENGINE
+========================= */
+
+function shuffle(array){
+
+  return [...array].sort(
+    ()=>Math.random()-0.5
+  );
+
+}
+
+
+function startQuiz(unitId,type){
+
+  currentUnit = unitId;
+  quizType = type;
   score = 0;
+  currentQuestion = 0;
 
-  document.getElementById("quizType")
-    .textContent =
-    type === "practice"
-    ? "✏️ PRACTICE"
-    : "🏆 QUEST";
+  let bank =
+    questions[unitId] || [];
+
+  currentQuestions = shuffle(bank);
 
   /*
-     Duplicate the small demo bank so the prototype
-     can demonstrate randomisation.
-
-     Later we replace this with 50–60+
-     questions per unit.
+   For prototype:
+   Practice = available questions
+   Quest = maximum 10 questions
   */
 
-  let bank = [...questionBank[currentSubject]];
-
-  quizQuestions = [];
-
-  while (quizQuestions.length < totalQuestions) {
-
-    quizQuestions.push(
-      bank[Math.floor(Math.random() * bank.length)]
-    );
-
+  if(type==="quest"){
+    currentQuestions =
+      currentQuestions.slice(
+        0,
+        Math.min(10,currentQuestions.length)
+      );
   }
 
-  show("quiz");
+  if(currentQuestions.length===0){
+    alert("No questions available yet.");
+    return;
+  }
 
-  renderQuestion();
+  showScreen("quiz");
+
+  loadQuestion();
 }
 
 
-function renderQuestion() {
+function loadQuestion(){
 
-  const q = quizQuestions[questionIndex];
+  const q =
+    currentQuestions[currentQuestion];
 
-  document.getElementById("quizProgress")
-    .style.width =
-    ((questionIndex / totalQuestions) * 100) + "%";
+  document.getElementById("questionNumber")
+    .textContent =
+    `${quizType==="quest" ? "🚀 Quest" : "✏️ Practice"} • Question ${currentQuestion+1} / ${currentQuestions.length}`;
 
   document.getElementById("question")
-    .textContent =
-    (questionIndex + 1) + ". " + q[0];
+    .textContent = q.q;
 
-  const answers =
-    [...q[1]].sort(() => Math.random() - 0.5);
+  const options =
+    document.getElementById("options");
 
-  const container =
-    document.getElementById("answers");
+  options.innerHTML = "";
 
-  container.innerHTML = "";
+  /*
+   Randomise answer choices while
+   keeping the correct answer tracked.
+  */
 
-  answers.forEach(answer => {
+  const prepared =
+    q.a.map((text,index)=>({
+      text:text,
+      correct:index===q.correct
+    }));
+
+  const shuffled =
+    shuffle(prepared);
+
+  shuffled.forEach(option=>{
 
     const button =
       document.createElement("button");
 
-    button.className = "answer";
+    button.className = "option";
 
-    button.textContent = answer;
+    button.textContent =
+      option.text;
 
-    button.onclick = () =>
-      checkAnswer(button,answer);
+    button.onclick = ()=>{
+      chooseAnswer(button,option.correct);
+    };
 
-    container.appendChild(button);
+    options.appendChild(button);
 
   });
 
   document.getElementById("feedback")
-    .textContent = "";
+    .style.display="none";
 
   document.getElementById("nextButton")
-    .style.display = "none";
+    .style.display="none";
 }
 
 
-function checkAnswer(button,answer) {
+function chooseAnswer(button,isCorrect){
 
-  document.querySelectorAll(".answer")
-    .forEach(b => b.disabled = true);
+  document
+    .querySelectorAll(".option")
+    .forEach(b=>b.disabled=true);
 
-  const correct =
-    quizQuestions[questionIndex][2];
+  const feedback =
+    document.getElementById("feedback");
 
-  if(answer === correct) {
+  feedback.style.display="block";
+
+  if(isCorrect){
 
     button.classList.add("correct");
 
+    feedback.textContent =
+      "🎉 Betul! Great job!";
+
     score++;
 
-    document.getElementById("feedback")
-      .textContent =
-      "✅ Correct! Great job!";
-
-  } else {
+  }else{
 
     button.classList.add("wrong");
 
-    document.getElementById("feedback")
-      .textContent =
-      "❌ Not quite. Keep trying!";
+    feedback.textContent =
+      "💡 Almost! Let's learn from this one.";
 
-    document.querySelectorAll(".answer")
-      .forEach(b => {
-
-        if(b.textContent === correct)
+    document
+      .querySelectorAll(".option")
+      .forEach(b=>{
+        if(b.textContent ===
+          currentQuestions[currentQuestion]
+          .a[currentQuestions[currentQuestion].correct]){
           b.classList.add("correct");
-
+        }
       });
 
   }
 
   document.getElementById("nextButton")
-    .style.display = "inline-block";
+    .style.display="block";
 }
 
 
-function nextQuestion() {
+function nextQuestion(){
 
-  questionIndex++;
+  currentQuestion++;
 
-  if(questionIndex < totalQuestions) {
+  if(currentQuestion <
+     currentQuestions.length){
 
-    renderQuestion();
+    loadQuestion();
 
-  } else {
+  }else{
 
     finishQuiz();
 
@@ -760,61 +1104,63 @@ function nextQuestion() {
 }
 
 
-function finishQuiz() {
+/* =========================
+   RESULT
+========================= */
+
+function finishQuiz(){
+
+  const total =
+    currentQuestions.length;
 
   const percentage =
-    Math.round((score / totalQuestions) * 100);
+    Math.round((score/total)*100);
 
-  const earned =
+  let stars = 0;
+
+  if(percentage>=90) stars=3;
+  else if(percentage>=70) stars=2;
+  else if(percentage>=50) stars=1;
+
+  const earnedXP =
     score * 10;
 
-  totalXP += earned;
+  progressData.xp += earnedXP;
 
-  document.getElementById("xp")
-    .textContent = totalXP;
+  progressData.stars += stars;
 
-  document.getElementById("mainProgress")
-    .style.width =
-    Math.min(100,10 + totalXP) + "%";
-
-  document.getElementById("score")
-    .textContent =
-    score + "/" + totalQuestions;
-
-  document.getElementById("resultMessage")
-    .textContent =
-    "You scored " + percentage + "%!";
-
-  document.getElementById("earnedXP")
-    .textContent =
-    "+" + earned + " XP ⭐";
-
-  if(percentage >= 90) {
-
-    document.getElementById("stars")
-      .textContent = "⭐⭐⭐⭐⭐ Excellent!";
-
-  } else if(percentage >= 70) {
-
-    document.getElementById("stars")
-      .textContent = "⭐⭐⭐⭐ Great job!";
-
-  } else if(percentage >= 50) {
-
-    document.getElementById("stars")
-      .textContent = "⭐⭐⭐ Keep going!";
-
-  } else {
-
-    document.getElementById("stars")
-      .textContent = "⭐⭐ Keep practising!";
-
+  if(stars===3){
+    progressData.badges++;
   }
 
-  show("result");
+  progressData.completed[currentUnit] = true;
+
+  saveProgress();
+
+  document.getElementById("resultText")
+    .textContent =
+    `You scored ${score} / ${total} (${percentage}%).`;
+
+  document.getElementById("resultXP")
+    .textContent =
+    `+${earnedXP} XP`;
+
+  document.getElementById("resultStars")
+    .textContent =
+    "⭐".repeat(stars) +
+    "☆".repeat(3-stars);
+
+  showScreen("result");
 }
+
+
+/* =========================
+   START
+========================= */
+
+updateStats();
 
 </script>
 
 </body>
-  </html>
+</html>
